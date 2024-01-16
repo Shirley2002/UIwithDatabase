@@ -1,0 +1,12 @@
+cython
+joblib
+jsonschema
+numpy
+pandas
+pickleshare
+Pillow
+scikit-learn==1.2.2
+scipy
+streamlit
+mysqlclient
+SQLAlchemy
