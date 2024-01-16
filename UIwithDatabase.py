@@ -20,14 +20,22 @@ import sklearn
 # from sklearn.svm import SVR
 
 import pickle as pickle
+from streamlit import connections
+
+##########
+# Initialize connection.
+conn = st.connection('mysql', type='sql')
 
 
+# Perform query.
+df = conn.query('SELECT * from prescription;', ttl=600)
 
-st.write(sklearn.__version__)
-
+# Print results.
+for row in df.itertuples():
+    st.write(f"{row.PrescriptionID} has a :{row.PatientID}:")
 
 #####################
-
+st.write(sklearn.__version__)
 def set_state(stage):
     st.session_state.stage = stage
 

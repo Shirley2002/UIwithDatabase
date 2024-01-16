@@ -10,3 +10,4 @@ scipy
 streamlit
 mysqlclient
 SQLAlchemy
+mysql-connector-python==8.0.32
